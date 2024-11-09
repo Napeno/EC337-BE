@@ -30,6 +30,10 @@ public class ProductService {
         return productRepository.findById(productId);
     }
 
+    public Optional<ProductModel> getProductByBarCode(String barcode) {
+        return productRepository.findByBarcode(barcode);
+    }
+
     public ProductModel createProduct(ProductModel product) {
         return productRepository.save(product);
     }
