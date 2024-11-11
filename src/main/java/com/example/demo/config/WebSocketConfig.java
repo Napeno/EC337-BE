@@ -20,6 +20,6 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
-        registry.addEndpoint("/api/payment-status").setAllowedOrigins("*").withSockJS();
+        registry.addEndpoint("/webhook/payment-success").setAllowedOrigins("*").withSockJS();
     }
 }
